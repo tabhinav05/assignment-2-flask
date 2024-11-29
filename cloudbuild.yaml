@@ -13,7 +13,7 @@ steps:
       - "--zone"
       - "northamerica-northeast2-a"  # Replace with the correct zone where your instance is deployed
       - "--container-image"
-      - docker.io/abhinavtanwar/tanwar-flask-backend:latest"
+      - gcr.io/tokyo-unity-443006-a6/tanwar-flask-backend:latest # Using Docker Hub image directly
 
 options:
   logging: CLOUD_LOGGING_ONLY
