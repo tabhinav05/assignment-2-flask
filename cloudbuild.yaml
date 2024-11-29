@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/tokyo-unity-443006-a6/tanwar-flask-backend', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/tokyo-unity-443006-a6/tanwar-flask-backend']
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'instances', 'update-container', 'abhinav-flask-backend-instance',
+         '--zone', 'us-central1-a',
+         '--container-image', 'gcr.io/tokyo-unity-443006-a6/tanwar-flask-backend']
