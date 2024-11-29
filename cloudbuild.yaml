@@ -10,9 +10,10 @@ steps:
       - "instances"
       - "update-container"
       - "abhinav-flask-backend-instance"
+      - "--zone"
+      - "northamerica-northeast2-a"  # Replace with the correct zone where your instance is deployed
       - "--container-image"
       - "docker.io/abhinavtanwar/tanwar-flask-backend:latest" # Using Docker Hub image directly
-      - "--zone"
 
 options:
   logging: CLOUD_LOGGING_ONLY
